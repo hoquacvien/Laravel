@@ -25,7 +25,6 @@ Route::post('/login', function (Illuminate\Http\Request $request) {
 			 && $request->password == 'admin') {
 			return view('welcome_admin');
 		}
-
 		return view('login_error');
 	});
 
