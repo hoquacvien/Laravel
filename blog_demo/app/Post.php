@@ -10,4 +10,7 @@ class Post extends Model {
 	protected $fillable = [
 		'image',
 	];
+	public function city() {
+		return $this->belongsTo('App\City');
+	}
 }
