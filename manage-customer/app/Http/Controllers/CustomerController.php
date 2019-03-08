@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Session;
 
 class CustomerController extends Controller {
 	public function index() {
-		$customers = Customer::paginate(6);
+		$customers = Customer::paginate(2);
 		$cities = City::all();
 		return view('customers.list', compact('customers', 'cities'));
 	}
@@ -76,9 +76,8 @@ class CustomerController extends Controller {
 		if (!$keyword) {
 			return redirect()->route('customers.index');
 		}
-		$customers = Customer::where('name', 'LIKE', '%' . $keyword . '%')->paginate(5);
+		$customers = Customer::where('name', 'LIKE', '%' . $keyword . '%')->paginate(2);
 		$cities = City::all();
 		return view('customers.list', compact('customers', 'cities'));
-
 	}
 }

@@ -8,7 +8,7 @@
           <h1>Thêm mới khách hàng</h1>
       </div>
       <div class="col-12">
-         <form method="post" action="{{ route('customers.store') }}">
+         <form method="post" action="">
          @csrf
          <div class="form-group">
             <label>Tên khách hàng</label>
@@ -22,6 +22,15 @@
             <label for="exampleInputEmail1">Ngày sinh</label>
             <input type="date" class="form-control" name="dob" required>
          </div>
+         <div>
+          <label for="">
+            <select name="city_id" id="">
+            @foreach($cities as $city)
+            <option value="{{$city->id}}">{{$city->name}}</option>
+            @endforeach
+          </select>
+          </label>
+        </div>
          <button type="submit" class="btn btn-primary">Submit</button>
          </form>
        </div>

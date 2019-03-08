@@ -1,6 +1,35 @@
 @extends('home')
 @section('title', 'Danh sách khách hàng')
 @section('content')
+<div class="col-6">
+
+  <form class="navbar-form navbar-left" action="{{route ('customers.search')}}">
+
+    @csrf
+
+      <div class="row">
+
+          <div class="col-8">
+
+              <div class="form-group">
+
+                  <input type="text" class="form-control" placeholder="Search" name="keyword" id="keyword">
+
+              </div>
+
+          </div>
+
+          <div class="col-4">
+
+              <button type="submit" class="btn btn-default">Tìm kiếm</button>
+
+          </div>
+
+      </div>
+
+  </form>
+
+</div>
      <div class="col-12">
            <div class="row">
                <div class="col-12"><h1>Danh Sách Khách Hàng</h1></div>
@@ -18,7 +47,7 @@
                 <th scope="col">Tên khách hàng</th>
                 <th scope="col">Ngày Sinh</th>
                 <th scope="col">Email</th>
-                <th></th>
+                <th scope="col">Tỉnh Thành </th>
                 <th></th>
           </tr>
           </thead>
@@ -32,6 +61,7 @@
                       <td>{{ $customer->name }}</td>
                       <td>{{ $customer->dob }}</td>
                       <td>{{ $customer->email }}</td>
+                      <td>{{ $customer->city->name }}</td>
                       <td><a href="{{ route('customers.edit', $customer->id) }}">sửa</a></td>
                       <td><a href="{{ route('customers.destroy', $customer->id) }}" class="text-danger" onclick="return confirm('Bạn chắc chắn muốn xóa?')">xóa</a></td>
                 </tr>
@@ -40,6 +70,7 @@
           </tbody>
           </table>
           <a class="btn btn-primary" href="{{ route('customers.create') }}">Thêm mới</a>
+           {{ $customers->appends(request()->query()) }}
           </div>
       </div>
 @endsection

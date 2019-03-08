@@ -1,4 +1,4 @@
-@extends('index')
+@extends('home')
 @section('title', 'Danh sách tỉnh thành')
 @section('content')
     <div class="col-12">

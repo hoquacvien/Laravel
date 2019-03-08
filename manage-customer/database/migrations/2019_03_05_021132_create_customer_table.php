@@ -17,6 +17,7 @@ class CreateCustomerTable extends Migration {
 			$table->string('name');
 			$table->date('dob');
 			$table->string('email');
+			$table->string('city_id');
 			$table->timestamps();
 		});
 	}

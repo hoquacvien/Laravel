@@ -9,13 +9,10 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
-
-Route::get('/', ['uses' => 'AnhController@index', 'as' => 'welcome']);
-
-Route::get('/upload', function () {
-    return view('upload');
+Route::get('/', function () {
+	return view('welcome');
 });
-
-Route::post('/upload', ['uses' => 'AnhController@upload', 'as' => 'upload']);
+Route::get('create', 'PostController@create');
+Route::post('store', 'PostController@store')->name('store');
