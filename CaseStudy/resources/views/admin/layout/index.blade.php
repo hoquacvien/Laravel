@@ -29,6 +29,7 @@
     <script src="admin_asset/bower_components/DataTables/media/js/jquery.dataTables.min.js"></script>
     <script src="admin_asset/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
     <script type="text/javascript" language="javascript" src="admin_asset/ckeditor/ckeditor.js" ></script>
+    <script src="admin_asset/js/hoa.js"></script>
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({

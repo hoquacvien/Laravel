@@ -69,6 +69,9 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="trangchu"><i class="fa fa-users fa-fw"></i> Trang Chủ<span class="fa arrow"></span></a>
+            </li>
         </ul>
     </div>
 </div>

@@ -1,0 +1,19 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: dungduong
+ * Date: 11/6/18
+ * Time: 18:47
+ */
+
+return [
+    'blog_application' => 'Ứng dụng Blog',
+    'home' => 'Trang chủ',
+    'list_post' => 'Danh Sách Bài Viết',
+    'create_post' => 'Tạo Bài Viết',
+    'save' => 'Lưu',
+    'edit_post' => 'Sửa Bài Viết',
+    'post_not_exist' => 'Không có bài viết nào',
+    'title' => 'Tiêu đề',
+    'content' => 'Nội dung',
+];

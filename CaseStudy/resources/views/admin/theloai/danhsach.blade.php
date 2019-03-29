@@ -29,7 +29,7 @@
                         <td>{{$tl->id}}</td>
                         <td>{{$tl->Ten}}</td>
                         <td>{{$tl->TenKhongDau}}</td>
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/theloai/xoa/{{$tl->id}}"> Delete</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/theloai/xoa/{{$tl->id}}" onclick="return confirm('Bạn có muốn xóa không?')"> Delete</a></td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/theloai/sua/{{$tl->id}}">Edit</a></td>
                     </tr>
                     @endforeach

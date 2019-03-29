@@ -31,7 +31,7 @@
                         <td>{{$lt->Ten}}</td>
                         <td>{{$lt->TenKhongDau}}</td>
                         <td>{{$lt->theloai->Ten}}</td>
-                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/loaitin/xoa/{{$lt->id}}"> Delete</a></td>
+                        <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/loaitin/xoa/{{$lt->id}}" onclick="return confirm('Bạn có muốn xóa không?')"> Delete</a></td>
                         <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/loaitin/sua/{{$lt->id}}">Edit</a></td>
                     </tr>
                     @endforeach
